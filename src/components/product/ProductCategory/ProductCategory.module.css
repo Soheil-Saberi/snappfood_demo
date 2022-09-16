@@ -1,0 +1,15 @@
+.div{
+    @apply flex flex-col divide-y
+}
+
+.divTitle{
+    @apply py-2 border
+}
+
+.divTitle p {
+    @apply text-center
+}
+
+.divProducts{
+    @apply grid grid-cols-4
+}
