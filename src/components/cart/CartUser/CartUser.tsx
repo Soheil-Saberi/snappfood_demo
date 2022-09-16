@@ -1,17 +1,17 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
 // Redux
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
 // Style
-import styles from "./CartUser.module.css";
+import styles from './CartUser.module.css';
 // Utils
-import ProductsValues from "../../../utility/ProductsValues";
-import { camaPrice } from "../../../utility/Utils";
+import ProductsValues from '../../../utility/ProductsValues';
+import { camaPrice } from '../../../utility/Utils';
 // Components
-import CartHeader from "../CartHeader/CartHeader";
-import CartRow from "../CartRow/CartRow";
-import CartItem from "../CartItem/CartItem";
-import CartSum from "../CartSum/CartSum";
-import CartButton from "../CartButton/CartButton";
+import CartHeader from '../CartHeader/CartHeader';
+import CartRow from '../CartRow/CartRow';
+import CartItem from '../CartItem/CartItem';
+import CartSum from '../CartSum/CartSum';
+import CartButton from '../CartButton/CartButton';
 
 export default function CartUser() {
   const cartUser = useSelector((state: any) => state.cartUser);

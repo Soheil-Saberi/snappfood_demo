@@ -1,8 +1,8 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
 // Style
-import styles from "./RestaurantButton.module.css";
+import styles from './RestaurantButton.module.css';
 // Icons
-import infoIcon from "../../../assets/images/info.png";
+import infoIcon from '../../../assets/images/info.png';
 
 export default function RestaurantButton(props: any) {
   const { buttonName } = props;

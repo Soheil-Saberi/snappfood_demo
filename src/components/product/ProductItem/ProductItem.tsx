@@ -1,10 +1,10 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
 // Style
-import styles from "./ProductItem.module.css";
+import styles from './ProductItem.module.css';
 // Utils
-import { camaPrice } from "../../../utility/Utils";
+import { camaPrice } from '../../../utility/Utils';
 // Components
-import ProductCounterItem from "./../ProductCounterItem/ProductCounterItem";
+import ProductCounterItem from './../ProductCounterItem/ProductCounterItem';
 
 export default function ProductItem(props: any) {
   const { id, title, img, alt, description, price } = props;

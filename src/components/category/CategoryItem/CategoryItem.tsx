@@ -1,6 +1,6 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
 // Style
-import styles from "./CategoryItem.module.css";
+import styles from './CategoryItem.module.css';
 
 export default function CategoryItem(props: any) {
   const { id, title, img, alt } = props;

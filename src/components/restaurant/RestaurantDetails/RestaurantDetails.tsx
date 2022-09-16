@@ -1,11 +1,11 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
 // Style
-import styles from "./RestaurantDetails.module.css";
+import styles from './RestaurantDetails.module.css';
 // Utils
-import { toFarsi } from "../../../utility/Utils";
+import { toFarsi } from '../../../utility/Utils';
 // Icons
-import restaurantImg from "../../../assets/images/restaurant-img.png";
-import starIcon from "../../../assets/images/star.png";
+import restaurantImg from '../../../assets/images/restaurant-img.png';
+import starIcon from '../../../assets/images/star.png';
 
 export default function RestaurantDetails(props: any) {
   const { name, star, comment } = props;

@@ -1,8 +1,8 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
 // Style
-import styles from "./CartRow.module.css";
+import styles from './CartRow.module.css';
 // Utils
-import { camaPrice } from "../../../utility/Utils";
+import { camaPrice } from '../../../utility/Utils';
 
 export default function CartRow(props: any) {
   const { title, price } = props;

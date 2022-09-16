@@ -1,10 +1,10 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
 // Style
-import styles from "./ProductCategory.module.css";
+import styles from './ProductCategory.module.css';
 // Utils
-import ProductsValues from "../../../utility/ProductsValues";
+import ProductsValues from '../../../utility/ProductsValues';
 // Components
-import ProductItem from "../ProductItem/ProductItem";
+import ProductItem from '../ProductItem/ProductItem';
 
 export default function ProductCategory(props: any) {
   const { categoryId, categoryName } = props;
@@ -15,9 +15,7 @@ export default function ProductCategory(props: any) {
           <p>{categoryName}</p>
         </div>
         <div className={styles.divProducts}>
-          {ProductsValues.filter(
-            (product) => product.category === categoryId
-          ).map((item) => (
+          {ProductsValues.filter((product) => product.category === categoryId).map((item) => (
             <ProductItem
               key={item.id}
               id={item.id}

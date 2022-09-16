@@ -1,12 +1,12 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
 // Redux
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
 // Style
-import styles from "./LeftSidebar.module.css";
+import styles from './LeftSidebar.module.css';
 // Components
-import DeliveryDetails from "../../delivery/DeliveryDetails/DeliveryDetails";
-import EmptyCart from "../../cart/EmptyCart/EmptyCart";
-import CartUser from "../../cart/CartUser/CartUser";
+import DeliveryDetails from '../../delivery/DeliveryDetails/DeliveryDetails';
+import EmptyCart from '../../cart/EmptyCart/EmptyCart';
+import CartUser from '../../cart/CartUser/CartUser';
 
 export default function LeftSidebar() {
   const cartUser = useSelector((state: any) => state.cartUser);

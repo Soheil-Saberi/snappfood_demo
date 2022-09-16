@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 interface Cart {
   productId: number;
@@ -8,7 +8,7 @@ interface Cart {
 const initialCartState: Array<Cart> = [];
 
 const cart = createSlice({
-  name: "cart",
+  name: 'cart',
   initialState: { cartUser: initialCartState },
   reducers: {
     emptyCart(state) {
@@ -29,16 +29,14 @@ const cart = createSlice({
       state.cartUser.map((item) => {
         if (item.productId === action.payload) {
           if (item.count === 1) {
-            state.cartUser = state.cartUser.filter(
-              (item) => item.productId !== action.payload
-            );
+            state.cartUser = state.cartUser.filter((item) => item.productId !== action.payload);
           } else {
             item.count--;
           }
         }
       });
-    },
-  },
+    }
+  }
 });
 
 export const cartActions = cart.actions;

@@ -1,10 +1,10 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
 // Style
-import styles from "./RightSidebar.module.css";
+import styles from './RightSidebar.module.css';
 // Components
-import RestaurantDetails from "../../restaurant/RestaurantDetails/RestaurantDetails";
-import RestaurantButton from "../../restaurant/RestaurantButton/RestaurantButton";
-import CategoryRestaurant from "../../category/CategoryRestaurant/CategoryRestaurant";
+import RestaurantDetails from '../../restaurant/RestaurantDetails/RestaurantDetails';
+import RestaurantButton from '../../restaurant/RestaurantButton/RestaurantButton';
+import CategoryRestaurant from '../../category/CategoryRestaurant/CategoryRestaurant';
 
 export default function RightSidebar() {
   return (

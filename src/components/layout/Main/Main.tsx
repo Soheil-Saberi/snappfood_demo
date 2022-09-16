@@ -1,10 +1,10 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
 //Style
-import styles from "./Main.module.css";
+import styles from './Main.module.css';
 // Components
-import RightSidebar from "../RightSidebar/RightSidebar";
-import Products from "../../product/Products/Products";
-import LeftSidebar from "../LeftSidebar/LeftSidebar";
+import RightSidebar from '../RightSidebar/RightSidebar';
+import Products from '../../product/Products/Products';
+import LeftSidebar from '../LeftSidebar/LeftSidebar';
 
 export default function Main() {
   return (

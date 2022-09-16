@@ -1,35 +1,35 @@
-.div{
-    @apply flex flex-row p-2 gap-6
+.div {
+  @apply flex flex-row p-2 gap-6;
 }
 
-.divImg{
-    @apply w-1/3
+.divImg {
+  @apply w-1/3;
 }
 
- .divImg img{
-    @apply rounded-xl
- }
+.divImg img {
+  @apply rounded-xl;
+}
 
- .divDetails{
-    @apply flex flex-col justify-around w-2/3
- }
+.divDetails {
+  @apply flex flex-col justify-around w-2/3;
+}
 
- .divDetails div{
-    @apply flex flex-row  gap-2
- }
+.divDetails div {
+  @apply flex flex-row  gap-2;
+}
 
- .divDetails img{
-    @apply h-5/6
- }
+.divDetails img {
+  @apply h-5/6;
+}
 
- .pName {
-    @apply text-sm font-bold
- }
+.pName {
+  @apply text-sm font-bold;
+}
 
- .pStart{
-    @apply text-xs font-bold
- }
+.pStart {
+  @apply text-xs font-bold;
+}
 
- .pCommment{
-    @apply text-xs text-gray-600
- }
+.pCommment {
+  @apply text-xs text-gray-600;
+}
