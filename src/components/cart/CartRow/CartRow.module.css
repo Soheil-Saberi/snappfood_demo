@@ -1,0 +1,7 @@
+.div{
+    @apply mt-2 flex flex-row items-center justify-between
+}
+
+.div p {
+    @apply text-xs
+}

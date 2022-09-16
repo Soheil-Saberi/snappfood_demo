@@ -1,0 +1,15 @@
+.button{
+    @apply w-full py-3 mt-2 border shadow-md rounded-full
+}
+
+.button div{
+    @apply flex flex-row justify-center items-center gap-2
+}
+
+.button img{
+    @apply h-1/2
+}
+
+.button p{
+    @apply text-xs text-green-500
+}

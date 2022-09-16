@@ -1,0 +1,35 @@
+.divItem{
+    @apply border laptop:col-span-2 mobile:col-span-4 p-4 flex flex-col justify-around gap-8 h-60
+}
+
+.divTop{
+    @apply flex flex-row  w-full h-40  gap-2
+}
+
+.divText{
+    @apply flex flex-col justify-around  w-1/2 gap-2
+}
+
+.pTitle{
+    @apply text-lg font-bold
+}
+
+.pDescription{
+    @apply text-xs text-justify text-gray-400
+}
+
+.divImg{
+    @apply w-1/2 p-2
+}
+
+.divImg img {
+    @apply w-full h-full object-cover rounded-lg
+}
+
+.divBottom{
+    @apply w-full flex flex-row justify-between items-center
+}
+
+.divBottom p {
+    @apply font-bold text-sm
+}

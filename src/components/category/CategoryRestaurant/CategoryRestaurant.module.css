@@ -1,0 +1,3 @@
+.div{
+    @apply grid grid-cols-4 mt-4 p-2 gap-2
+}

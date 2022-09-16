@@ -1,0 +1,7 @@
+.div{
+    @apply flex flex-row justify-between
+}
+
+.div img{
+    @apply h-5
+}

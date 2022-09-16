@@ -1,0 +1,7 @@
+.div{
+    @apply w-full h-screen fixed top-1/2 right-1/2
+}
+
+.div p {
+    @apply text-lg font-bold
+}

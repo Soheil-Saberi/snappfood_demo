@@ -1,0 +1,8 @@
+.div {
+    @apply mt-4 gap-2 p-4 flex flex-col  border rounded-md shadow-md w-full h-fit
+}
+
+.divCartItem{
+    @apply mt-3 flex flex-col gap-2
+}
+

@@ -1,0 +1,23 @@
+.div {
+    @apply w-full h-fit  mt-10 border bg-background 
+ }
+ 
+ .divRow{
+     @apply flex flex-row p-10 gap-4
+ }
+ 
+ .divRow img{
+     @apply h-10
+ }
+ 
+ .divText {
+     @apply flex flex-col h-10
+ }
+ 
+ .pSnapp{
+     @apply font-bold text-pink
+ }
+ 
+ .pText{
+     @apply text-xs
+ }

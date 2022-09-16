@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Fragment, Suspense } from "react";
+import { ErrorBoundary } from "react-error-boundary";
+
+// Components
+import Header from "./components/layout/Header/Header";
+import Loading from "./components/layout/Loading/Loading";
+import Error from "./components/layout/Error/Error";
+import Main from "./components/layout/Main/Main";
+import Footer from "./components/layout/Footer/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <ErrorBoundary
+        fallbackRender={({ error }) => <Error message={error.message} />}
+      >
+        <Suspense fallback={<Loading />}>
+          <Header />
+          <Main />
+          <Footer />
+        </Suspense>
+      </ErrorBoundary>
+    </Fragment>
   );
 }
-
 export default App;
