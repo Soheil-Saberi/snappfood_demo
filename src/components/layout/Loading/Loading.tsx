@@ -1,6 +1,6 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
 // Style
-import styles from "./Loading.module.css";
+import styles from './Loading.module.css';
 
 export default function Loading() {
   return (

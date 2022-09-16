@@ -1,8 +1,8 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
 // Style
-import styles from "./EmptyCart.module.css";
+import styles from './EmptyCart.module.css';
 // Icons
-import emptyCartIcon from "../../../assets/images/bag.png";
+import emptyCartIcon from '../../../assets/images/bag.png';
 
 export default function EmptyCart() {
   return (

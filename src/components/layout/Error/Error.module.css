@@ -1,7 +1,7 @@
-.div{
-    @apply w-full h-screen fixed top-1/2 right-1/2 flex flex-col
+.div {
+  @apply w-full h-screen fixed top-1/2 right-1/2 flex flex-col;
 }
 
 .div p {
-    @apply text-lg font-bold
+  @apply text-lg font-bold;
 }

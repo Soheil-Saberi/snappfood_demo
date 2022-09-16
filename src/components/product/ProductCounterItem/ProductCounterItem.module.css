@@ -1,11 +1,11 @@
-.div{
-    @apply flex flex-row items-center gap-2 pl-4
+.div {
+  @apply flex flex-row items-center gap-2 pl-4;
 }
 
-.div button{
-    @apply w-8 h-8 border shadow-md rounded-full text-pink
+.div button {
+  @apply w-8 h-8 border shadow-md rounded-full text-pink;
 }
 
-.div p{
-    @apply text-sm
+.div p {
+  @apply text-sm;
 }

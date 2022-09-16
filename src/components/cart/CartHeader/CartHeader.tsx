@@ -1,13 +1,13 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
 // Redux
-import { useDispatch } from "react-redux";
-import { cartActions } from "../../../store/cart";
+import { useDispatch } from 'react-redux';
+import { cartActions } from '../../../store/cart';
 // Style
-import styles from "./CartHeader.module.css";
+import styles from './CartHeader.module.css';
 // Icons
-import deleteIcon from "../../../assets/images/delete.png";
+import deleteIcon from '../../../assets/images/delete.png';
 // Utils
-import { camaPrice } from "../../../utility/Utils";
+import { camaPrice } from '../../../utility/Utils';
 
 const sumOrderUser = (cartUser: any): number => {
   return cartUser.reduce((previousValue: any, currentValue: any) => {
@@ -24,11 +24,7 @@ export default function CartHeader(props: any) {
     <Fragment>
       <div className={styles.div}>
         <p>سبد خرید ({camaPrice(sumOrderUser(cartUser))})</p>
-        <img
-          onClick={() => dispatch(cartActions.emptyCart())}
-          src={deleteIcon}
-          alt="delete-icon"
-        />
+        <img onClick={() => dispatch(cartActions.emptyCart())} src={deleteIcon} alt="delete-icon" />
       </div>
     </Fragment>
   );

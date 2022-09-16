@@ -1,14 +1,11 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
 // Style
-import styles from "./CartButton.module.css";
+import styles from './CartButton.module.css';
 
 export default function CartButton() {
   return (
     <Fragment>
-      <button
-        className={styles.button}
-        onClick={() => alert("سفارش با موفقیت ثبت شد")}
-      >
+      <button className={styles.button} onClick={() => alert('سفارش با موفقیت ثبت شد')}>
         ثبت سفارش
       </button>
     </Fragment>

@@ -1,19 +1,19 @@
-.aside{
-    @apply z-50 sticky top-0 bg-background flex flex-row items-center justify-between tablet:justify-between mobile:justify-end w-full h-20 shadow-md px-10
+.aside {
+  @apply z-50 sticky top-0 bg-background flex flex-row items-center justify-between tablet:justify-between mobile:justify-end w-full h-20 shadow-md px-10;
 }
 
-.logo{
-    @apply w-24  tablet:block mobile:hidden 
+.logo {
+  @apply w-24  tablet:block mobile:hidden;
 }
 
-.input{
-    @apply h-1/2 w-1/4 p-2 bg-gray-200 rounded-md laptop:block tablet:hidden mobile:hidden
+.input {
+  @apply h-1/2 w-1/4 p-2 bg-gray-200 rounded-md laptop:block tablet:hidden mobile:hidden;
 }
 
-.divIcon{
-    @apply flex flex-row items-center justify-center gap-4 
+.divIcon {
+  @apply flex flex-row items-center justify-center gap-4;
 }
 
-.divIcon img{
-    @apply w-6
+.divIcon img {
+  @apply w-6;
 }

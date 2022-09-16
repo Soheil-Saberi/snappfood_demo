@@ -1,11 +1,11 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
 // Style
-import styles from "./CartItem.module.css";
+import styles from './CartItem.module.css';
 // Utils
-import ProductsValues from "../../../utility/ProductsValues";
-import { camaPrice } from "../../../utility/Utils";
+import ProductsValues from '../../../utility/ProductsValues';
+import { camaPrice } from '../../../utility/Utils';
 // Components
-import ProductCounterItem from "../../product/ProductCounterItem/ProductCounterItem";
+import ProductCounterItem from '../../product/ProductCounterItem/ProductCounterItem';
 
 export default function CartItem(props: any) {
   const { productId } = props;

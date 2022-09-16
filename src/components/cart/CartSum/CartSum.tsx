@@ -1,6 +1,6 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
 // Style
-import styles from "./CartSum.module.css";
+import styles from './CartSum.module.css';
 
 export default function CartSum(props: any) {
   const { sum } = props;

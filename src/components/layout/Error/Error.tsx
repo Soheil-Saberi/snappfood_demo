@@ -1,6 +1,6 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
 // Style
-import styles from "./Error.module.css";
+import styles from './Error.module.css';
 
 export default function Error(props: any) {
   const { message } = props;

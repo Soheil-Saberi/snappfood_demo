@@ -1,7 +1,7 @@
-.div{
-    @apply flex flex-row justify-between
+.div {
+  @apply flex flex-row justify-between;
 }
 
-.div img{
-    @apply h-5
+.div img {
+  @apply h-5;
 }
