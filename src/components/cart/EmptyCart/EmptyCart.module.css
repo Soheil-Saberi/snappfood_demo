@@ -1,0 +1,11 @@
+.div {
+    @apply mt-4 py-28 gap-2 flex flex-col items-center border rounded-md shadow-md w-full h-fit
+}
+
+.div img{
+    @apply w-14
+}
+
+.div p {
+    @apply text-gray-400
+}
