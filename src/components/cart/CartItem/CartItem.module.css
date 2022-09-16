@@ -1,0 +1,15 @@
+.div{
+    @apply flex flex-col gap-2 
+}
+
+.pTitle{
+    @apply text-sm
+}
+
+.divPrice{
+    @apply flex flex-row items-center justify-between
+}
+
+.divPrice p{
+    @apply text-xs
+}

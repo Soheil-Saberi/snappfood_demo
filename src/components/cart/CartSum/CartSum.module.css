@@ -1,0 +1,7 @@
+.divSum{
+    @apply mt-2 flex flex-row items-center justify-between
+}
+
+.divSum p{
+    @apply text-sm 
+}
