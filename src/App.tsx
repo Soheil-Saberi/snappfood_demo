@@ -5,6 +5,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import Header from "./components/layout/Header/Header";
 import Loading from "./components/layout/Loading/Loading";
 import Error from "./components/layout/Error/Error";
+import Main from "./components/layout/Main/Main";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       >
         <Suspense fallback={<Loading />}>
           <Header />
+          <Main />
         </Suspense>
       </ErrorBoundary>
     </Fragment>
