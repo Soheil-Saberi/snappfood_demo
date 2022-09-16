@@ -6,6 +6,7 @@ import Header from "./components/layout/Header/Header";
 import Loading from "./components/layout/Loading/Loading";
 import Error from "./components/layout/Error/Error";
 import Main from "./components/layout/Main/Main";
+import Footer from "./components/layout/Footer/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Suspense fallback={<Loading />}>
           <Header />
           <Main />
+          <Footer />
         </Suspense>
       </ErrorBoundary>
     </Fragment>
