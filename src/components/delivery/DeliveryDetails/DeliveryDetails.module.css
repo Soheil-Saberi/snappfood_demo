@@ -1,0 +1,7 @@
+.div{
+    @apply flex flex-row items-center border rounded-md shadow-md w-full h-fit px-4 py-2
+}
+
+.div p{
+    @apply text-sm mr-4
+}
