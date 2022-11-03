@@ -21,10 +21,10 @@ export default function CartUser() {
   const DELIVERY_PRICE = 15000;
 
   const priceProduct = (productId: number): number | undefined => {
-    return ProductsValues.find((item: any) => item.id === productId)?.price;
+    return parseInt(ProductsValues.find((item: any) => item.id === productId)?.price!);
   };
 
-  const sumCartUser = (): number => {
+  const sumCartUser = (): string => {
     return cartUser.reduce((previousValue: any, currentValue: any) => {
       return (
         previousValue +

@@ -18,7 +18,7 @@ export default function CartItem(props: any) {
         <p className={styles.pTitle}>{product?.title}</p>
         <div className={styles.divPrice}>
           <p>
-            <b>{camaPrice(product?.price)} </b> تومان
+            <b>{camaPrice(product!.price)} </b> تومان
           </p>
           <ProductCounterItem productId={productId} />
         </div>

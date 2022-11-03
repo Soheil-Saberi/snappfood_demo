@@ -23,7 +23,7 @@ export default function CartHeader(props: any) {
   return (
     <Fragment>
       <div className={styles.div}>
-        <p>سبد خرید ({camaPrice(sumOrderUser(cartUser))})</p>
+        <p>سبد خرید ({camaPrice(sumOrderUser(cartUser).toString())})</p>
         <img onClick={() => dispatch(cartActions.emptyCart())} src={deleteIcon} alt="delete-icon" />
       </div>
     </Fragment>
