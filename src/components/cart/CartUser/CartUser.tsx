@@ -48,7 +48,7 @@ export default function CartUser() {
         <CartRow title="هزینه دسته بندی" price={PACK_PRICE} />
         <CartRow title="مالیات" price={TAX_PRICE} />
         <CartRow title="هزینه ارسال" price={DELIVERY_PRICE} />
-        <CartSum sum={camaPrice(sumCartUser())} />
+        <CartSum sum={camaPrice(sumCartUser().toString())} />
         <hr />
         <CartButton />
       </div>

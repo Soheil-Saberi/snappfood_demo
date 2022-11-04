@@ -12,7 +12,7 @@ export default function DeliveryDetails(props: any) {
     <Fragment>
       <div className={styles.div}>
         <img src={deliveryIcon} alt="delivery-icon" />
-        <p>پیک فروشنده : {camaPrice(deliveryPrice)} تومان</p>
+        <p>پیک فروشنده : {camaPrice(deliveryPrice.toString())} تومان</p>
       </div>
     </Fragment>
   );

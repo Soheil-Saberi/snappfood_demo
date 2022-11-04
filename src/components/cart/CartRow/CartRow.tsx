@@ -10,7 +10,7 @@ export default function CartRow(props: any) {
     <Fragment>
       <div className={styles.div}>
         <p>{title}</p>
-        <p>{camaPrice(price)} تومان</p>
+        <p>{camaPrice(price.toString())} تومان</p>
       </div>
     </Fragment>
   );
