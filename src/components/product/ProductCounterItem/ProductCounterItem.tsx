@@ -1,20 +1,25 @@
-import { Fragment } from 'react';
+import { FC, Fragment } from 'react';
 // Style
 import styles from './ProductCounterItem.module.css';
 // Redux
 import { useDispatch, useSelector } from 'react-redux';
 import { cartActions } from '../../../store/cart';
+import { AppDispatch, RootState } from '../../../store';
 // Utils
 import { toFarsi } from '../../../utility/Utils';
+// Model
+import Cart from '../../../model/Cart';
 
-export default function ProductCounterItem(props: any) {
-  const { productId } = props;
+interface Props {
+  productId: number;
+}
 
-  const cartUser = useSelector((state: any) => state.cartUser);
-  const dispatch = useDispatch();
+const ProductCounterItem: FC<Props> = ({ productId }) => {
+  const cartUser = useSelector((state: RootState) => state.cartUser);
+  const dispatch = useDispatch<AppDispatch>();
 
-  const countProduct = (productId: number) => {
-    return cartUser.filter((item: any) => item.productId === productId)[0]?.count.toString();
+  const countProduct = (productId: number): string => {
+    return cartUser.filter((item: Cart) => item.productId === productId)[0]?.count.toString();
   };
 
   return (
@@ -26,4 +31,6 @@ export default function ProductCounterItem(props: any) {
       </div>
     </Fragment>
   );
-}
+};
+
+export default ProductCounterItem;

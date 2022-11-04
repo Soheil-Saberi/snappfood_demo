@@ -12,8 +12,10 @@ import pishPic2 from '../assets/images/pish-2.jpg';
 import drinkPic1 from '../assets/images/drink-1.jpg';
 import drinkPic2 from '../assets/images/drink-2.jpg';
 import etcPic1 from '../assets/images/etc-1.jpg';
+// Model
+import Product from '../model/Product';
 
-export default [
+const ProductsValues: Product[] = [
   {
     id: 1,
     category: 1,
@@ -145,3 +147,5 @@ export default [
     alt: 'etc-pic1'
   }
 ];
+
+export default ProductsValues;

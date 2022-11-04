@@ -1,9 +1,12 @@
-import { Fragment } from 'react';
+import { FC, Fragment } from 'react';
 // Style
 import styles from './CartSum.module.css';
 
-export default function CartSum(props: any) {
-  const { sum } = props;
+interface Props {
+  sum: string;
+}
+
+const CartSum: FC<Props> = ({ sum }) => {
   return (
     <Fragment>
       <div className={styles.divSum}>
@@ -16,4 +19,6 @@ export default function CartSum(props: any) {
       </div>
     </Fragment>
   );
-}
+};
+
+export default CartSum;

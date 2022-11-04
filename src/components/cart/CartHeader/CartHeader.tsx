@@ -1,31 +1,40 @@
-import { Fragment } from 'react';
+import { Fragment, FC } from 'react';
 // Redux
 import { useDispatch } from 'react-redux';
+import { AppDispatch } from '../../../store';
 import { cartActions } from '../../../store/cart';
 // Style
 import styles from './CartHeader.module.css';
 // Icons
 import deleteIcon from '../../../assets/images/delete.png';
 // Utils
-import { camaPrice } from '../../../utility/Utils';
+import { toFarsi } from '../../../utility/Utils';
+// Model
+import Cart from '../../../model/Cart';
 
-const sumOrderUser = (cartUser: any): number => {
-  return cartUser.reduce((previousValue: any, currentValue: any) => {
-    return previousValue + currentValue.count;
-  }, 0);
-};
+interface Props {
+  cartUser: Cart[];
+}
 
-export default function CartHeader(props: any) {
-  const { cartUser } = props;
+const CartHeader: FC<Props> = ({ cartUser }) => {
+  const dispatch = useDispatch<AppDispatch>();
 
-  const dispatch = useDispatch();
+  const sumOrderUser = (cartUser: Cart[]): string => {
+    return cartUser
+      .reduce((previousValue: any, currentValue: any) => {
+        return previousValue + currentValue.count;
+      }, 0)
+      .toString();
+  };
 
   return (
     <Fragment>
       <div className={styles.div}>
-        <p>سبد خرید ({camaPrice(sumOrderUser(cartUser).toString())})</p>
+        <p>سبد خرید ({toFarsi(sumOrderUser(cartUser))})</p>
         <img onClick={() => dispatch(cartActions.emptyCart())} src={deleteIcon} alt="delete-icon" />
       </div>
     </Fragment>
   );
-}
+};
+
+export default CartHeader;

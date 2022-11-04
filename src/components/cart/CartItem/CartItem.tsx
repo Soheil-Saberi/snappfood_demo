@@ -1,16 +1,20 @@
-import { Fragment } from 'react';
+import { FC, Fragment } from 'react';
 // Style
 import styles from './CartItem.module.css';
 // Utils
 import ProductsValues from '../../../utility/ProductsValues';
 import { camaPrice } from '../../../utility/Utils';
+// Model
+import Product from '../../../model/Product';
 // Components
 import ProductCounterItem from '../../product/ProductCounterItem/ProductCounterItem';
 
-export default function CartItem(props: any) {
-  const { productId } = props;
+interface Props {
+  productId: number;
+}
 
-  const product = ProductsValues.find((item) => item.id === productId);
+const CartItem: FC<Props> = ({ productId }) => {
+  const product = ProductsValues.find((item: Product) => item.id === productId);
 
   return (
     <Fragment key={productId}>
@@ -26,4 +30,6 @@ export default function CartItem(props: any) {
       </div>
     </Fragment>
   );
-}
+};
+
+export default CartItem;
