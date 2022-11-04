@@ -5,12 +5,14 @@ import styles from './Products.module.css';
 import CategoryValues from '../../../utility/CategoryValues';
 // Components
 import ProductCategory from '../ProductCategory/ProductCategory';
+// Model
+import Category from '../../../model/Category';
 
 export default function Products() {
   return (
     <Fragment>
       <aside className={styles.aside}>
-        {CategoryValues.map((item) => (
+        {CategoryValues.map((item: Category) => (
           <ProductCategory key={item.id} categoryId={item.id} categoryName={item.title} />
         ))}
       </aside>
