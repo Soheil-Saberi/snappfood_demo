@@ -1,11 +1,14 @@
-import { Fragment } from 'react';
+import { Fragment, FC } from 'react';
 // Style
 import styles from './RestaurantButton.module.css';
 // Icons
 import infoIcon from '../../../assets/images/info.png';
 
-export default function RestaurantButton(props: any) {
-  const { buttonName } = props;
+interface Props {
+  buttonName: string;
+}
+
+const RestaurantButton: FC<Props> = ({ buttonName }) => {
   return (
     <Fragment>
       <button className={styles.button}>
@@ -16,4 +19,6 @@ export default function RestaurantButton(props: any) {
       </button>
     </Fragment>
   );
-}
+};
+
+export default RestaurantButton;

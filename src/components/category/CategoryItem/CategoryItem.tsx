@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, FC } from 'react';
 // Model
 import Category from '../../../model/Category';
 // Style
@@ -8,7 +8,7 @@ interface Props {
   category: Category;
 }
 
-const CategoryItem: React.FC<Props> = ({ category }) => {
+const CategoryItem: FC<Props> = ({ category }) => {
   const baseUrl = process.env.PUBLIC_URL;
   return (
     <Fragment key={category.id}>
