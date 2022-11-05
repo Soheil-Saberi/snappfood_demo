@@ -2,7 +2,7 @@ import { Fragment, FC } from 'react';
 // Redux
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../../store';
-import { cartActions } from '../../../store/cart';
+import { cartActions } from '../../../store/cartSlice';
 // Style
 import styles from './CartHeader.module.css';
 // Icons

@@ -3,7 +3,7 @@ import { FC, Fragment } from 'react';
 import styles from './ProductCounterItem.module.css';
 // Redux
 import { useDispatch, useSelector } from 'react-redux';
-import { cartActions } from '../../../store/cart';
+import { cartActions } from '../../../store/cartSlice';
 import { AppDispatch, RootState } from '../../../store';
 // Utils
 import { toFarsi } from '../../../utility/Utils';
