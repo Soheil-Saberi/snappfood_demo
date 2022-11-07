@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartRow Component Component Rendernig With Value Template 1`] = `
+<div>
+  <p>
+    هزینه دسته بندی
+  </p>
+  <p>
+    ۵,۰۰۰
+     تومان
+  </p>
+</div>
+`;

@@ -1,4 +1,4 @@
-import { FC, Fragment } from 'react';
+import { FC, Fragment, memo } from 'react';
 // Style
 import styles from './CartItem.module.css';
 // Utils
@@ -32,4 +32,4 @@ const CartItem: FC<Props> = ({ productId }) => {
   );
 };
 
-export default CartItem;
+export default memo(CartItem);

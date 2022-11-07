@@ -1,4 +1,4 @@
-import { Fragment, FC } from 'react';
+import { Fragment, FC, useMemo } from 'react';
 // Redux
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../../store';
@@ -8,7 +8,7 @@ import styles from './CartHeader.module.css';
 // Icons
 import deleteIcon from '../../../assets/images/delete.png';
 // Utils
-import { toFarsi } from '../../../utility/Utils';
+import { sumCountCartUser, toFarsi } from '../../../utility/Utils';
 // Model
 import Cart from '../../../model/Cart';
 
@@ -19,20 +19,16 @@ interface Props {
 const CartHeader: FC<Props> = ({ cartUser }) => {
   const dispatch = useDispatch<AppDispatch>();
 
-  const sumOrderUser = (cartUser: Cart[]): string => {
-    return cartUser
-      .reduce((previousValue: any, currentValue: any) => {
-        return previousValue + currentValue.count;
-      }, 0)
-      .toString();
-  };
+  const memoSumOrderUser = useMemo(() => sumCountCartUser(cartUser), [cartUser]);
 
   return (
     <Fragment>
-      <div className={styles.div}>
-        <p>سبد خرید ({toFarsi(sumOrderUser(cartUser))})</p>
-        <img onClick={() => dispatch(cartActions.emptyCart())} src={deleteIcon} alt="delete-icon" />
-      </div>
+      {memoSumOrderUser !== '0' && (
+        <div className={styles.div}>
+          <p>سبد خرید ({toFarsi(memoSumOrderUser)})</p>
+          <img onClick={() => dispatch(cartActions.emptyCart())} src={deleteIcon} alt="delete-icon" />
+        </div>
+      )}
     </Fragment>
   );
 };

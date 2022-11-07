@@ -1,4 +1,4 @@
-import { FC, Fragment } from 'react';
+import { FC, Fragment, memo, useMemo } from 'react';
 // Style
 import styles from './ProductCounterItem.module.css';
 // Redux
@@ -6,9 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { cartActions } from '../../../store/cartSlice';
 import { AppDispatch, RootState } from '../../../store';
 // Utils
-import { toFarsi } from '../../../utility/Utils';
-// Model
-import Cart from '../../../model/Cart';
+import { toFarsi, countProduct } from '../../../utility/Utils';
 
 interface Props {
   productId: number;
@@ -18,19 +16,17 @@ const ProductCounterItem: FC<Props> = ({ productId }) => {
   const cartUser = useSelector((state: RootState) => state.cartUser);
   const dispatch = useDispatch<AppDispatch>();
 
-  const countProduct = (productId: number): string => {
-    return cartUser.filter((item: Cart) => item.productId === productId)[0]?.count.toString();
-  };
+  const memoCountProduct = useMemo(() => countProduct(productId, cartUser), [cartUser, productId]);
 
   return (
     <Fragment key={productId}>
       <div className={styles.div}>
         <button onClick={() => dispatch(cartActions.addToCart(productId))}>+</button>
-        <p>{toFarsi(countProduct(productId) || '0')}</p>
+        <p>{toFarsi(memoCountProduct || '0')}</p>
         <button onClick={() => dispatch(cartActions.removeFromCart(productId))}>-</button>
       </div>
     </Fragment>
   );
 };
 
-export default ProductCounterItem;
+export default memo(ProductCounterItem);

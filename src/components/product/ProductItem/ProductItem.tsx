@@ -1,4 +1,4 @@
-import { FC, Fragment } from 'react';
+import { FC, Fragment, memo } from 'react';
 // Style
 import styles from './ProductItem.module.css';
 // Utils
@@ -33,4 +33,4 @@ const ProductItem: FC<Props> = ({ product }) => {
   );
 };
 
-export default ProductItem;
+export default memo(ProductItem);

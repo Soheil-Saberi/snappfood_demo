@@ -12,10 +12,12 @@ interface Props {
 const CartRow: FC<Props> = ({ title, price }) => {
   return (
     <Fragment>
-      <div className={styles.div}>
-        <p>{title}</p>
-        <p>{camaPrice(price)} تومان</p>
-      </div>
+      {(price || price) && (
+        <div className={styles.div}>
+          <p>{title}</p>
+          <p>{camaPrice(price)} تومان</p>
+        </div>
+      )}
     </Fragment>
   );
 };

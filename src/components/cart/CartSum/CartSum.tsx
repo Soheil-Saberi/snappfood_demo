@@ -9,14 +9,16 @@ interface Props {
 const CartSum: FC<Props> = ({ sum }) => {
   return (
     <Fragment>
-      <div className={styles.divSum}>
-        <p>
-          <b>مجموع</b>
-        </p>
-        <p>
-          <b>{sum} </b> تومان
-        </p>
-      </div>
+      {sum && (
+        <div className={styles.divSum}>
+          <p>
+            <b>مجموع</b>
+          </p>
+          <p>
+            <b>{sum} </b> تومان
+          </p>
+        </div>
+      )}
     </Fragment>
   );
 };
