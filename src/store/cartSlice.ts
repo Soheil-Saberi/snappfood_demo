@@ -1,11 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
+// Model
+import Cart from '../model/Cart';
 
-interface Cart {
-  productId: number;
-  count: number;
-}
-
-const initialCartState: Array<Cart> = [];
+const initialCartState: Cart[] = [];
 
 const cart = createSlice({
   name: 'cart',

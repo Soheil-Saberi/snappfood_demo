@@ -1,29 +1,32 @@
-import { Fragment } from 'react';
+import { FC, Fragment, memo, useMemo } from 'react';
 // Style
 import styles from './ProductCounterItem.module.css';
 // Redux
 import { useDispatch, useSelector } from 'react-redux';
-import { cartActions } from '../../../store/cart';
+import { cartActions } from '../../../store/cartSlice';
+import { AppDispatch, RootState } from '../../../store';
 // Utils
-import { camaPrice } from '../../../utility/Utils';
+import { toFarsi, countProduct } from '../../../utility/Utils';
 
-export default function ProductCounterItem(props: any) {
-  const { productId } = props;
+interface Props {
+  productId: number;
+}
 
-  const cartUser = useSelector((state: any) => state.cartUser);
-  const dispatch = useDispatch();
+const ProductCounterItem: FC<Props> = ({ productId }) => {
+  const cartUser = useSelector((state: RootState) => state.cartUser);
+  const dispatch = useDispatch<AppDispatch>();
 
-  const countProduct = (productId: number) => {
-    return cartUser.filter((item: any) => item.productId === productId)[0]?.count;
-  };
+  const memoCountProduct = useMemo(() => countProduct(productId, cartUser), [cartUser, productId]);
 
   return (
     <Fragment key={productId}>
       <div className={styles.div}>
         <button onClick={() => dispatch(cartActions.addToCart(productId))}>+</button>
-        <p>{camaPrice(countProduct(productId) || 0)}</p>
+        <p>{toFarsi(memoCountProduct || '0')}</p>
         <button onClick={() => dispatch(cartActions.removeFromCart(productId))}>-</button>
       </div>
     </Fragment>
   );
-}
+};
+
+export default memo(ProductCounterItem);

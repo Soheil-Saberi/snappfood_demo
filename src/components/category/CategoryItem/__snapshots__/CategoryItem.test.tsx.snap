@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryItem Component Component Rendernig With Value Template 1`] = `
+<a
+  href="undefined/#1"
+>
+  <img
+    alt="pizza-icon"
+    src="../assets/images/pizza.png"
+  />
+  <p>
+    پیتزا
+  </p>
+</a>
+`;

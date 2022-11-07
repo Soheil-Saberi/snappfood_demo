@@ -5,12 +5,14 @@ import styles from './RightSidebar.module.css';
 import RestaurantDetails from '../../restaurant/RestaurantDetails/RestaurantDetails';
 import RestaurantButton from '../../restaurant/RestaurantButton/RestaurantButton';
 import CategoryRestaurant from '../../category/CategoryRestaurant/CategoryRestaurant';
+// Utils
+import RestaurantValue from '../../../utility/RestaurantValue';
 
 export default function RightSidebar() {
   return (
     <Fragment>
       <aside className={styles.aside}>
-        <RestaurantDetails name="رستوران سالانی" star="4.5" comment="500" />
+        <RestaurantDetails restaurant={RestaurantValue} />
         <RestaurantButton buttonName="اطلاعات و نظرات" />
         <CategoryRestaurant />
       </aside>

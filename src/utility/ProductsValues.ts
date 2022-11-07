@@ -12,15 +12,17 @@ import pishPic2 from '../assets/images/pish-2.jpg';
 import drinkPic1 from '../assets/images/drink-1.jpg';
 import drinkPic2 from '../assets/images/drink-2.jpg';
 import etcPic1 from '../assets/images/etc-1.jpg';
+// Model
+import Product from '../model/Product';
 
-export default [
+const ProductsValues: Product[] = [
   {
     id: 1,
     category: 1,
     title: 'پیتزا کراکف',
     description: 'خمیر تازه دست ساز، سس مخصوص، سوسیس کراکف پنیری دودی، قارچ، پنیر ترکیبی، فلفل دلمه، زیتون اسلایس شده',
     img: pizzaPic1,
-    price: 250000,
+    price: '250000',
     alt: 'pizza-pic1'
   },
   {
@@ -30,7 +32,7 @@ export default [
     description:
       'خمیر تازه دست ساز، سس مخصوص، گوشت چرخ شده و مزه دار شده، ژامبون گوشت و مرغ 90% دودی، قارچ، پنیر ترکیبی، فلفل دلمه',
     img: pizzaPic2,
-    price: 200000,
+    price: '200000',
     alt: 'pizza-pic2'
   },
   {
@@ -39,7 +41,7 @@ export default [
     title: 'ساندویچ هات داگ',
     description: 'هات داگ دودی 90%، پنیر گودا، سس قارچ، مخلفات (کاهو، گوجه، خیارشور)',
     img: sandPic1,
-    price: 300000,
+    price: '300000',
     alt: 'sand-pic1'
   },
   {
@@ -49,7 +51,7 @@ export default [
     description:
       'فیله طعم دار شده و سوخاری شده با ادویه نرمال، ژامبون 90% مرغ دودی، سس قارچ، پنیر گودا، پنیر موزارلا، مخلفات (کاهو، گوجه، خیارشور)',
     img: sandPic2,
-    price: 240000,
+    price: '240000',
     alt: 'sand-pic2'
   },
   {
@@ -58,7 +60,7 @@ export default [
     title: 'بشقاب داغ گوشت',
     description: 'سیب زمینی خلال سرخ شده، گوشت رست شده و مزه دار شده، قارچ، پنیر ترکیبی، سس مخصوص',
     img: dishPic1,
-    price: 190000,
+    price: '190000',
     alt: 'dish-pic1'
   },
   {
@@ -67,7 +69,7 @@ export default [
     title: 'ترکی پرسی',
     description: 'گوشت و مرغ مزه دار شده، سس مخصوص، پیاز جعفری، خیارشور',
     img: kababPic1,
-    price: 210000,
+    price: '210000',
     alt: 'kabab-pic1'
   },
   {
@@ -76,7 +78,7 @@ export default [
     title: 'ساندویچ ترکی',
     description: 'گوشت و مرغ مزه دار شده، سس مخصوص، پیاز جعفری، خیارشور',
     img: kababPic2,
-    price: 180000,
+    price: '180000',
     alt: 'kabab-pic2'
   },
   {
@@ -86,7 +88,7 @@ export default [
     description:
       'میگو طعم دار شده و سوخاری شده با ادویه نرمال، سیب زمینی سرخ شده خلال مزه دار شده با ادویه مخصوص، سالاد کلم، نان بروتچن',
     img: chikPic1,
-    price: 260000,
+    price: '260000',
     alt: 'chik-pic1'
   },
   {
@@ -96,7 +98,7 @@ export default [
     description:
       'بال و کتف سوخاری شده و مرینیت شده با ادویه نرمال، سیب زمینی سرخ شده خلال مزه دار شده با ادویه مخصوص، سالاد کلم، نان بروتچن',
     img: chikPic2,
-    price: 150000,
+    price: '150000',
     alt: 'chik-pic2'
   },
   {
@@ -105,7 +107,7 @@ export default [
     title: 'سالاد کلم',
     description: 'کلم، هویج، سس مخصوص سالاد کلم',
     img: pishPic1,
-    price: 50000,
+    price: '50000',
     alt: 'pish-pic1'
   },
   {
@@ -114,7 +116,7 @@ export default [
     title: 'قارچ سوخاری',
     description: 'قارچ سوخاری شده با روکش مخصوص',
     img: pishPic2,
-    price: 70000,
+    price: '70000',
     alt: 'pish-pic2'
   },
   {
@@ -123,7 +125,7 @@ export default [
     title: 'کوکا',
     description: '',
     img: drinkPic1,
-    price: 10000,
+    price: '10000',
     alt: 'drink-pic1'
   },
   {
@@ -132,7 +134,7 @@ export default [
     title: 'فانتا',
     description: '',
     img: drinkPic2,
-    price: 10000,
+    price: '10000',
     alt: 'drink-pic2'
   },
   {
@@ -140,8 +142,10 @@ export default [
     category: 8,
     title: 'نان باگت',
     description: '',
-    price: 5000,
+    price: '5000',
     img: etcPic1,
     alt: 'etc-pic1'
   }
 ];
+
+export default ProductsValues;

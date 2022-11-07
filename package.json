@@ -7,7 +7,6 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
     "@types/node": "^16.11.59",
     "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
@@ -25,21 +24,53 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "jsdom",
+    "transform": {
+      "node_modules/variables/.+\\.(j|t)sx?$": "ts-jest",
+      ".+\\.(css|scss|png|jpg|svg)$": "jest-transform-stub"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!variables/.*)"
+    ]
+  },
   "eslintConfig": {
-    "extends": ["react-app", "react-app/jest"]
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
-    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@types/jest": "^29.2.1",
     "@types/numeral": "^2.0.2",
+    "@types/react-test-renderer": "^18.0.0",
     "autoprefixer": "^10.4.11",
+    "babel-jest": "^29.2.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.5.1",
+    "jest-transform-css": "^6.0.0",
+    "jest-transform-stub": "^2.0.0",
     "postcss": "^8.4.16",
     "prettier": "2.7.1",
-    "tailwindcss": "^3.1.8"
+    "react-test-renderer": "^18.2.0",
+    "tailwindcss": "^3.1.8",
+    "ts-jest": "^29.0.3"
   }
 }

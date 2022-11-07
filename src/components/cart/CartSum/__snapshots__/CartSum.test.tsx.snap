@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartRow Component Component Rendernig With Value Template 1`] = `
+<div>
+  <p>
+    <b>
+      مجموع
+    </b>
+  </p>
+  <p>
+    <b>
+      500000
+       
+    </b>
+     تومان
+  </p>
+</div>
+`;

@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, FC } from 'react';
 // Style
 import styles from './DeliveryDetails.module.css';
 // Icons
@@ -6,8 +6,11 @@ import deliveryIcon from '../../../assets/images/delivery.png';
 // Utils
 import { camaPrice } from '../../../utility/Utils';
 
-export default function DeliveryDetails(props: any) {
-  const { deliveryPrice } = props;
+interface Props {
+  deliveryPrice: string;
+}
+
+const DeliveryDetails: FC<Props> = ({ deliveryPrice }) => {
   return (
     <Fragment>
       <div className={styles.div}>
@@ -16,4 +19,6 @@ export default function DeliveryDetails(props: any) {
       </div>
     </Fragment>
   );
-}
+};
+
+export default DeliveryDetails;

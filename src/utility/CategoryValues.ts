@@ -6,8 +6,9 @@ import chickenIcon from '../assets/images/chicken.png';
 import pishIcon from '../assets/images/pish.png';
 import sodaIcon from '../assets/images/soda.png';
 import etcIcon from '../assets/images/etc.png';
+import Category from '../model/Category';
 
-export default [
+const CategoryValues: Category[] = [
   { id: 1, title: 'پیتزا', img: pizzaIcon, alt: 'pizza-icon' },
   { id: 2, title: 'ساندویچ', img: sandwichIcon, alt: 'sandwich-icon' },
   { id: 3, title: 'بشقاب داغ', img: dishIcon, alt: 'dish-icon' },
@@ -17,3 +18,5 @@ export default [
   { id: 7, title: 'نوشیدنی', img: sodaIcon, alt: 'soda-icon' },
   { id: 8, title: 'سایر', img: etcIcon, alt: 'etc-icon' }
 ];
+
+export default CategoryValues;

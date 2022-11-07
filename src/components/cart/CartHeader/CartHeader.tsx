@@ -1,31 +1,36 @@
-import { Fragment } from 'react';
+import { Fragment, FC, useMemo } from 'react';
 // Redux
 import { useDispatch } from 'react-redux';
-import { cartActions } from '../../../store/cart';
+import { AppDispatch } from '../../../store';
+import { cartActions } from '../../../store/cartSlice';
 // Style
 import styles from './CartHeader.module.css';
 // Icons
 import deleteIcon from '../../../assets/images/delete.png';
 // Utils
-import { camaPrice } from '../../../utility/Utils';
+import { sumCountCartUser, toFarsi } from '../../../utility/Utils';
+// Model
+import Cart from '../../../model/Cart';
 
-const sumOrderUser = (cartUser: any): number => {
-  return cartUser.reduce((previousValue: any, currentValue: any) => {
-    return previousValue + currentValue.count;
-  }, 0);
-};
+interface Props {
+  cartUser: Cart[];
+}
 
-export default function CartHeader(props: any) {
-  const { cartUser } = props;
+const CartHeader: FC<Props> = ({ cartUser }) => {
+  const dispatch = useDispatch<AppDispatch>();
 
-  const dispatch = useDispatch();
+  const memoSumOrderUser = useMemo(() => sumCountCartUser(cartUser), [cartUser]);
 
   return (
     <Fragment>
-      <div className={styles.div}>
-        <p>سبد خرید ({camaPrice(sumOrderUser(cartUser))})</p>
-        <img onClick={() => dispatch(cartActions.emptyCart())} src={deleteIcon} alt="delete-icon" />
-      </div>
+      {memoSumOrderUser !== '0' && (
+        <div className={styles.div}>
+          <p>سبد خرید ({toFarsi(memoSumOrderUser)})</p>
+          <img onClick={() => dispatch(cartActions.emptyCart())} src={deleteIcon} alt="delete-icon" />
+        </div>
+      )}
     </Fragment>
   );
-}
+};
+
+export default CartHeader;

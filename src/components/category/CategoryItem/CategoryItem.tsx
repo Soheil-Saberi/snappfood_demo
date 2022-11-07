@@ -1,16 +1,25 @@
-import { Fragment } from 'react';
+import { Fragment, FC } from 'react';
+// Model
+import Category from '../../../model/Category';
 // Style
 import styles from './CategoryItem.module.css';
 
-export default function CategoryItem(props: any) {
-  const { id, title, img, alt } = props;
+interface Props {
+  category: Category;
+}
+
+const CategoryItem: FC<Props> = ({ category }) => {
   const baseUrl = process.env.PUBLIC_URL;
   return (
-    <Fragment key={id}>
-      <a href={`${baseUrl}/#${id}`} className={styles.a}>
-        <img src={img} alt={alt} />
-        <p>{title}</p>
-      </a>
+    <Fragment key={category.id}>
+      {category.title && (
+        <a href={`${baseUrl}/#${category.id}`} className={styles.a}>
+          <img src={category.img} alt={category.alt} />
+          <p>{category.title}</p>
+        </a>
+      )}
     </Fragment>
   );
-}
+};
+
+export default CategoryItem;

@@ -11,7 +11,7 @@ export default function CategoryRestaurant() {
     <Fragment>
       <div className={styles.div}>
         {CategoryValues.map((item) => (
-          <CategoryItem key={item.id} id={item.id} title={item.title} img={item.img} alt={item.alt} />
+          <CategoryItem key={item.id} category={item} />
         ))}
       </div>
     </Fragment>
