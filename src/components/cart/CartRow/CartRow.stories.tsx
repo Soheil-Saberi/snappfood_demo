@@ -1,10 +1,10 @@
-import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import CartRow from './CartRow';
+import { string } from 'prop-types';
 
 export default {
   component: CartRow,
-  title: 'Cart Row'
+  title: 'Cart/Row'
 } as ComponentMeta<typeof CartRow>;
 
 export const CartRowStory: ComponentStory<typeof CartRow> = (args) => {
@@ -18,4 +18,9 @@ export const CartRowStory: ComponentStory<typeof CartRow> = (args) => {
 CartRowStory.args = {
   title: 'هزینه دسته بندی',
   price: '500000'
+};
+
+CartRowStory.argTypes = {
+  title: string.isRequired,
+  price: string.isRequired
 };
