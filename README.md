@@ -42,7 +42,7 @@ Open http://localhost:3000 to view it in the browser.
 
 ## Tech Stack
 
-**Client:** TypeScript, React, Redux, TailwindCSS, Jest
+**Client:** TypeScript, React, Redux, TailwindCSS, Jest, Storybook
 
 **Server:** Local
 
