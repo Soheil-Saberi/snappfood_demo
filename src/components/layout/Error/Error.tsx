@@ -1,9 +1,12 @@
-import { Fragment } from 'react';
+import { FC, Fragment } from 'react';
 // Style
 import styles from './Error.module.css';
 
-export default function Error(props: any) {
-  const { message } = props;
+interface Props {
+  message: string;
+}
+
+const Error: FC<Props> = ({ message }) => {
   return (
     <Fragment>
       <div className={styles.div}>
@@ -12,4 +15,6 @@ export default function Error(props: any) {
       </div>
     </Fragment>
   );
-}
+};
+
+export default Error;

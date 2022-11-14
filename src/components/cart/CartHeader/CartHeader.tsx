@@ -26,7 +26,9 @@ const CartHeader: FC<Props> = ({ cartUser }) => {
       {memoSumOrderUser !== '0' && (
         <div className={styles.div}>
           <p>سبد خرید ({toFarsi(memoSumOrderUser)})</p>
-          <img onClick={() => dispatch(cartActions.emptyCart())} src={deleteIcon} alt="delete-icon" />
+          <button type="button" onClick={() => dispatch(cartActions.emptyCart())}>
+            <img src={deleteIcon} alt="delete-icon" />
+          </button>
         </div>
       )}
     </Fragment>

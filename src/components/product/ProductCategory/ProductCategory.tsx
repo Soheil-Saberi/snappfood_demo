@@ -22,7 +22,7 @@ const ProductCategory: FC<Props> = ({ categoryId, categoryName }) => {
         </div>
         <div className={styles.divProducts}>
           {ProductsValues.filter((product: Product) => product.category === categoryId).map((item: Product) => (
-            <ProductItem product={item} />
+            <ProductItem key={item.id} product={item} />
           ))}
         </div>
       </div>

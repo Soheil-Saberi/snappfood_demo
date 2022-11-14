@@ -11,7 +11,7 @@ interface Props {
 const RestaurantButton: FC<Props> = ({ buttonName }) => {
   return (
     <Fragment>
-      <button className={styles.button}>
+      <button type="button" className={styles.button}>
         <div>
           <img src={infoIcon} alt="info-icon" />
           <p>{buttonName}</p>
