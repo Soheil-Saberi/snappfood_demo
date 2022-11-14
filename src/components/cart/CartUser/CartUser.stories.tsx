@@ -8,13 +8,23 @@ import store from '../../../store';
 import Cart from '../../../model/Cart';
 import Constants from '../../../utility/Constants';
 import { camaPrice } from '../../../utility/Utils';
-import { array, string } from 'prop-types';
+
+interface Row {
+  title: string;
+  price: string;
+}
+
+interface Args {
+  cartUser: Cart[];
+  rows: Row[];
+  sum: string;
+}
 
 export default {
   title: 'Cart/Cart'
 };
 
-export const CartUserStory = (args: any) => {
+export const CartUserStory = (args: Args) => {
   return (
     <Provider store={store}>
       <div className="mt-4 gap-2 p-4 flex flex-col  border rounded-md shadow-md w-full h-fit">
@@ -55,10 +65,4 @@ CartUserStory.args = {
     }
   ],
   sum: '500000000'
-};
-
-CartUserStory.argsType = {
-  cartUser: array.isRequired,
-  rows: array.isRequired,
-  sum: string.isRequired
 };

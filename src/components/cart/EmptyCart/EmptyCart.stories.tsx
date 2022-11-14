@@ -11,7 +11,7 @@ export default {
 export const CartHeaderStory: ComponentStory<typeof EmptyCart> = () => {
   return (
     <Provider store={store}>
-      <EmptyCart />;
+      <EmptyCart />
     </Provider>
   );
 };
