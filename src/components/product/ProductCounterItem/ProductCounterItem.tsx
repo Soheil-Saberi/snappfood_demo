@@ -21,9 +21,13 @@ const ProductCounterItem: FC<Props> = ({ productId }) => {
   return (
     <Fragment key={productId}>
       <div className={styles.div}>
-        <button onClick={() => dispatch(cartActions.addToCart(productId))}>+</button>
+        <button type="button" onClick={() => dispatch(cartActions.addToCart(productId))}>
+          +
+        </button>
         <p>{toFarsi(memoCountProduct || '0')}</p>
-        <button onClick={() => dispatch(cartActions.removeFromCart(productId))}>-</button>
+        <button type="button" onClick={() => dispatch(cartActions.removeFromCart(productId))}>
+          -
+        </button>
       </div>
     </Fragment>
   );

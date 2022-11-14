@@ -10,6 +10,7 @@ import Constants from '../../../utility/Constants';
 import { camaPrice } from '../../../utility/Utils';
 
 interface Row {
+  id: number;
   title: string;
   price: string;
 }
@@ -34,8 +35,8 @@ export const CartUserStory = (args: Args) => {
             return <CartItem key={item.productId} productId={item.productId} />;
           })}
         </div>
-        {args.rows.map((row: any) => (
-          <CartRow title={row.title} price={row.price} />
+        {args.rows.map((row: Row) => (
+          <CartRow key={row.id} title={row.title} price={row.price} />
         ))}
         <CartSum sum={camaPrice(args.sum)!} />
         <hr />
@@ -52,14 +53,17 @@ CartUserStory.args = {
   ],
   rows: [
     {
+      id: 1,
       title: 'هزینه دسته بندی',
       price: Constants.PACK_PRICE.toString()
     },
     {
+      id: 2,
       title: 'مالیات',
       price: Constants.TAX_PRICE.toString()
     },
     {
+      id: 3,
       title: 'هزینه ارسال',
       price: Constants.DELIVERY_PRICE.toString()
     }

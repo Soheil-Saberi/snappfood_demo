@@ -23,7 +23,7 @@ const camaPrice = (num: string): string | null => {
 // Total number of cart products
 const sumCountCartUser = (cartUser: Cart[]): string => {
   return cartUser
-    .reduce((previousValue: any, currentValue: any) => {
+    .reduce((previousValue: number, currentValue: Cart) => {
       return previousValue + currentValue.count;
     }, 0)
     .toString();
@@ -45,7 +45,7 @@ const sumPriceCartUser = (cartUser: Cart[]): string => {
 };
 
 const priceProduct = (productId: number): number | undefined => {
-  return parseInt(ProductsValues.find((item: Product) => item.id === productId)?.price!);
+  return parseInt(ProductsValues.find((item: Product) => item.id === productId)!.price);
 };
 
 const countProduct = (productId: number, cartUser: Cart[]): string => {
