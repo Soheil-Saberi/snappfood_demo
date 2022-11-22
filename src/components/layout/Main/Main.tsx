@@ -9,11 +9,11 @@ import LeftSidebar from '../LeftSidebar/LeftSidebar';
 export default function Main() {
   return (
     <Fragment>
-      <div className={styles.div}>
+      <main className={styles.main}>
         <RightSidebar />
         <Products />
         <LeftSidebar />
-      </div>
+      </main>
     </Fragment>
   );
 }
