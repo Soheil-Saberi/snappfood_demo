@@ -7,7 +7,7 @@ import snappfoodLogo from './../../../assets/images/snappfood-logo.png';
 export default function Footer() {
   return (
     <Fragment>
-      <div className={styles.div}>
+      <footer className={styles.footer}>
         <div className={styles.divRow}>
           <img src={snappfoodLogo} alt="snappfood-logo" />
           <div className={styles.divText}>
@@ -15,7 +15,7 @@ export default function Footer() {
             <p className={styles.pText}>تجربه سفارش غذا، از زودفود تا اسنپ‌فود</p>
           </div>
         </div>
-      </div>
+      </footer>
     </Fragment>
   );
 }

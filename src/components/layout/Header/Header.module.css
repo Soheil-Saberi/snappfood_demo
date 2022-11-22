@@ -1,4 +1,4 @@
-.aside {
+.header {
   @apply z-50 sticky top-0 bg-background flex flex-row items-center justify-between tablet:justify-between mobile:justify-end w-full h-20 shadow-md px-10;
 }
 
